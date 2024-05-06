@@ -18,6 +18,7 @@ jobs:
       run: pip install html5validator
 
     - name: Show PWD
-      run: pwd
+      run: ls -la /home/runner/work/apache/apache
+
     - name: Validate HTML
       run: html5validator --root index.html --ignore 'INFO;WARNING'
