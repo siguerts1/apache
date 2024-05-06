@@ -17,5 +17,7 @@ jobs:
     - name: Install HTML5 Validator
       run: pip install html5validator
 
+    - name: Show PWD
+      run: pwd
     - name: Validate HTML
       run: html5validator --root . --ignore 'INFO;WARNING'
