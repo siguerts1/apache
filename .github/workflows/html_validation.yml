@@ -21,4 +21,4 @@ jobs:
       run: ls -la /home/runner/work/apache/apache
 
     - name: Validate HTML
-      run: html5validator --root index.html --ignore 'INFO;WARNING'
+      run: html5validator --root /home/runner/work/apache/apache/ --ignore 'INFO;WARNING'
