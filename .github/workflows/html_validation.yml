@@ -1,0 +1,21 @@
+name: HTML Validation
+
+on: [push, pull_request]
+
+jobs:
+  validate_html:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+
+    - name: Install HTML5 Validator
+      run: pip install html5validator
+
+    - name: Validate HTML
+      run: html5validator --root . --ignore 'INFO;WARNING'
